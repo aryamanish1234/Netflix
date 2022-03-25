@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const User = require("../models/user");
 const Crypto = require("crypto-js");
-const user = require("../models/user");
 const verify = require('../middleware/varifytoken')
 
 
