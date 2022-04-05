@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const authRouter = require("./routes/auth");
 const UserRouter = require("./routes/users");
 const MovieRouter = require("./routes/movie");
+const ListRouter = require('./routes/lists');
 const app = express();
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use(express.json());
 app.use("/api/auth", authRouter);
 app.use("/api/users/", UserRouter);
 app.use("/api/movies/", MovieRouter);
+app.use("/api/lists", ListRouter);
 
 app.listen(3000, () => {
     console.log("Server is Running ");
